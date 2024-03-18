@@ -26,25 +26,27 @@
     }
     @include tablet{
         .hero {
-        min-height: 80vh;
-        &__title {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            width: 32rem;
-            padding-left: 1.5rem;
-           }
+            min-height: 80vh;
+            &__title {
+                font-size: 3.75rem;
+                line-height: 4.25rem;
+                width: 32rem;
+                padding-left: 1.5rem;
+            }
         }
     }
     @include desktop{
         .hero{
-        &__title {
-            font-family: "Avenir-Next";
-            color: $color-white;
-            font-size: 3.7rem;
-            width: 32rem;
-            line-height: 2rem;
-            padding-left: 1rem;
-            font-weight: 600;
+            min-height: 80vh;
+            &__title {
+                font-family: "Avenir-Next";
+                color: $color-white;
+                font-size: 3.7rem;
+                width: 32rem;
+                line-height: 2rem;
+                padding-left: 1rem;
+                font-weight: 600;
+                // height: 80vh;
             }
         }
     }

@@ -1,5 +1,4 @@
 @use "./breakpoints" as *;
-// @import "./colors";
 
 .header__nav {
     font-family: "Avenir-Next";
@@ -117,12 +116,7 @@
                     padding: 1.75rem 0 1.125rem 0;
                     margin: 0 0 0 3rem;
                     border-width: 0.25rem;
-               
                 }
-            //     #active {
-            //     color: $color-white;
-            //     border-bottom: 0.4125rem solid $color-white;
-            // }    
             }
         }
     }

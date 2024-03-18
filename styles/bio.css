@@ -101,7 +101,7 @@
     gap: 2rem;
   }
 }
-@media (min-width: 80rem) and (max-width: 120rem) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .about {
     padding: 0 10rem 3rem 10rem;
   }
@@ -116,6 +116,8 @@
   }
   .about__intro-body {
     padding-bottom: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .about__article-title {
     font-size: 2rem;
@@ -212,7 +214,7 @@
     margin: 0 auto;
     background-color: #323232;
     color: #FFFFFF;
-    padding: 0 1.5rem;
+    padding: 0 8rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
@@ -262,7 +264,7 @@
     gap: 2rem;
   }
 }
-@media (min-width: 80rem) and (max-width: 120rem) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .footer {
     margin: 0 auto;
     background-color: #323232;
@@ -278,7 +280,7 @@
     padding-bottom: 2.25rem;
   }
   .footer__section {
-    flex-direction: row;
+    flex-direction: column;
     align-items: baseline;
     justify-content: space-between;
     gap: 2rem;
@@ -355,7 +357,10 @@
     padding-left: 1.5rem;
   }
 }
-@media (min-width: 80rem) and (max-width: 120rem) {
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .hero .hero {
+    min-height: 80vh;
+  }
   .hero .hero__title {
     font-family: "Avenir-Next";
     color: #FFFFFF;
@@ -408,7 +413,7 @@
     padding: 0 0 1.5rem 0;
   }
 }
-@media (min-width: 80rem) and (max-width: 120rem) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .photo {
     padding: 0 10rem;
   }
@@ -514,7 +519,7 @@
     border-bottom: 0.4125rem solid transparent;
   }
 }
-@media (min-width: 80rem) and (max-width: 120rem) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .header__nav {
     flex-direction: row;
   }
