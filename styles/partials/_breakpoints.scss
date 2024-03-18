@@ -13,7 +13,7 @@
   }
   
   @mixin mobile {
-    @media (min-width: 20rem) and (max-width: 47.94rem) {
+    @media (max-width: 47.94rem) {
       @content;
     }
 }
