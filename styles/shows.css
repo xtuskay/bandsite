@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(/assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(/assets/fonts/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(/assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+.hero2 {
+  background-image: url(/assets/images/hero-shows.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 17.5rem;
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=shows.css.map */
