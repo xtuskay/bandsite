@@ -1,5 +1,3 @@
-
-
 const credits = [
   {
     name: "Victor Pinto",
@@ -23,39 +21,29 @@ const credits = [
   },
 ];
 
-
 function displayComment(commentArray) {
   console.log(commentArray);
+  const commentTarget = document.querySelector(".comment");
   commentArray.forEach((comment) => {
-    // console.log(comment);
-    const commentTarget = document.querySelector(".comment");
-    // create a line
     const line = document.createElement("hr");
 
-    //create the main section
     const commentBlock = document.createElement("section");
 
-    // create the photo container
     const photoContainer = document.createElement("div");
 
-    // create comment container
     const commentContainer = document.createElement("div");
 
-    //create the nameDate container
     const nameDateContainer = document.createElement("div");
 
-    // create the name element
     const name = document.createElement("h3");
 
-    // create the date container
     const dateContainer = document.createElement("p");
 
-    // create the commentText container
     const commentTextContainer = document.createElement("div");
 
-    // create the commentText element
     const commentText = document.createElement("p");
 
+    commentTarget.append(line);
     commentBlock.append(photoContainer);
     commentBlock.append(commentContainer);
     commentContainer.append(nameDateContainer);
@@ -75,18 +63,20 @@ function displayComment(commentArray) {
     name.classList.add("comment__card-user");
     dateContainer.classList.add("comment__card-date");
     commentTextContainer.classList.add("comment__card-paragraph");
+    line.classList.add("comment__line");
 
     commentTarget.appendChild(commentBlock);
   });
+
+  const bottomLine = document.createElement("hr");
+  bottomLine.classList.add("comment__line");
+  commentTarget.append(bottomLine);
 }
 
 displayComment(credits);
 
-
-// adding functionality //
 const form = document.querySelector(".conv__form");
 
-// added event listener & stops page reloading
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -104,21 +94,15 @@ form.addEventListener("submit", (e) => {
   credits.unshift(newComment);
   displayComment(credits);
 
-  // Clear all comments from the page
   const commentTarget = document.querySelector(".comment");
   commentTarget.innerHTML = "";
 
-  // Re-renders all comments from the comment array
   displayComment(credits);
 
-  // Clears the input fields after submitting a new comment
-
-    function submitForm() {
+  function submitForm() {
     let form = document.getElementsByName("conv__form")[0];
-    form.submit(); 
-    form.reset(); 
-    return false; 
-    }
+    form.submit();
+    form.reset();
+    return false;
+  }
 });
-
-    

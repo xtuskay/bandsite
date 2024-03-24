@@ -16,14 +16,113 @@
   font-weight: 700;
   font-style: normal;
 }
-.hero2 {
-  background-image: url(/assets/images/hero-shows.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 17.5rem;
-  margin-top: 7rem;
+.show {
+  padding: 2rem 1rem;
+  font-family: "Avenir-Next";
+}
+.show__heading {
+  font-weight: 600;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 2.25rem;
+  padding: 1rem 1.5rem 1rem 0;
+}
+.show__container__header {
+  display: none;
+  font-size: 0.875rem;
+  line-height: 1.3rem;
+}
+.show__new {
+  padding: 1.5rem 0 1rem 0;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  transition: background-color 0.3s;
+}
+.show__new:hover {
+  background-color: #E1E1E1;
+}
+.show__new-selected {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.show__info {
+  font-family: "Avenir-Next";
+  font-size: 0.85rem;
+  padding-bottom: 1rem;
+  color: #AFAFAF;
+}
+.show__details {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3rem;
+  padding-bottom: 1rem;
+}
+.show__button {
+  background-color: #323232;
+  color: white;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  align-self: center;
+  width: 100%;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .show__title {
+    margin-bottom: 2rem;
+  }
+  .show__container__header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Avenir-Next";
+    color: #AFAFAF;
+  }
+  .show__new {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .show__info {
+    display: none;
+  }
+  .show__button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 4px;
+  }
+}
+@media (min-width: 1280px) {
+  .show {
+    margin: 0 auto;
+    display: flex;
+  }
+  .show__title {
+    flex: 0.5;
+    margin-left: 8rem;
+  }
+  .show__container {
+    flex: 2;
+    margin-right: 7rem;
+  }
+  .show__container__header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Avenir-Next";
+    color: #AFAFAF;
+  }
+  .show__header-location {
+    margin-right: 7rem;
+  }
+  .show__new {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .show__info {
+    display: none;
+  }
+  .show__button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 4px;
+  }
 }/*# sourceMappingURL=shows.css.map */
