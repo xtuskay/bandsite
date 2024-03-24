@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/index-page.js" defer></script>
     <link rel="stylesheet" href="./styles/bio.css">
     <title>Bandsite</title>
 </head>
@@ -19,7 +20,7 @@
                     <a class="header__nav-list-item-link" id="active" href="./index.html">Biography</a>
                 </li>
                 <li class="header__nav-list-item">
-                    <a class="header__nav-list-item-link" href="">Shows</a>
+                    <a class="header__nav-list-item-link" href="./pages/shows.html">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -38,7 +39,8 @@
                 <img class="about__intro-image" src="./assets/images/band.jpg" alt="photo image of the band">
                 <article class="about__intro-body">
                     <p>
-                        We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be better,
+                        We push each other to be the best. It’s not uncommon for one of us to say ‘this needs to be
+                        better,
                         back
                         to the drawing
                         board’”
@@ -50,24 +52,32 @@
                 <h2 class="about__article-title">The Bee Knees</h2>
                 <div class="about__article-container">
                     <p class="about__article-body">
-                        The Bees Knees is a pop rock band originating from San Francisco, California. The band consists a
+                        The Bees Knees is a pop rock band originating from San Francisco, California. The band consists
+                        a
                         dynamic lineup
-                        featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a drummer. The band achieved
+                        featuring two lead vocalists, two guitarists, a bassist, a keyboardist and a drummer. The band
+                        achieved
                         its first
-                        commercial success as an unsigned act, drawing attention from their future manager. Having extensive
+                        commercial success as an unsigned act, drawing attention from their future manager. Having
+                        extensive
                         experience working
-                        with both new and seasoned acts, the manager was confident the band could succeed even further with more
+                        with both new and seasoned acts, the manager was confident the band could succeed even further
+                        with more
                         support,
                         pushing The Bees Knees to sign with a well known record label.
                     </p>
                     <p class="about__article-body-deux">
-                        From there, the band has soared, gaining international recognition and ranking in the top 10 on the
+                        From there, the band has soared, gaining international recognition and ranking in the top 10 on
+                        the
                         Poster Charts. New
-                        fans immediately fell in love with the band’s original and organic attitude, solidifying their place as
+                        fans immediately fell in love with the band’s original and organic attitude, solidifying their
+                        place as
                         one of the
-                        hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The
+                        hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves
+                        as “The
                         Hive” and are
-                        drawn to their candid and authentic performances on stage. The Bees Knees are currently recording their
+                        drawn to their candid and authentic performances on stage. The Bees Knees are currently
+                        recording their
                         second studio
                         album, looking to be released in early 2024.
                     </p>
@@ -78,16 +88,51 @@
         <section class="photo">
             <h2 class="photo__heading">Photo Gallery</h2>
             <div class="photo__container">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-1.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-2.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-3.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-4.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-5.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-6.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-7.jpg" alt="photo of people enjoying a concert">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-8.jpg" alt="photo of a dj equiment">
-                <img class="photo__container-item" src="./assets/images/Photo-gallery-9.jpg" alt="photo of a band member">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-1.jpg"
+                    alt="photo of people enjoying a concert">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-2.jpg"
+                    alt="photo of people enjoying a concert">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-3.jpg"
+                    alt="photo of concert-goers waving">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-4.jpg"
+                    alt="photo of people enjoying a concert">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-5.jpg"
+                    alt="photo of people enjoying a concert">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-6.jpg"
+                    alt="photo of people enjoying a concert">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-7.jpg"
+                    alt="photo of people enjoying a concert">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-8.jpg"
+                    alt="photo of a dj equiment">
+                <img class="photo__container-item" src="./assets/images/Photo-gallery-9.jpg"
+                    alt="photo of a band member">
             </div>
+        </section>
+        <!-- Conversation section -->
+        <section class="conv__section">
+            <h2 class="conv__section-title">Join the conversation</h2>
+            <div class="conv">
+                <div class="conv__profile">
+                    <img class="conv__profile-img" src="/assets/images/Mohan-muruge.jpg" alt="photo of Mohan Muruge">
+                </div>
+                <form action="" class="conv__form">
+                    <div class="conv__name-container">
+                        <label class="conv__name-label" for="name">NAME</label>
+                        <input name="NAME" type="text" id="name" class="conv__name-input" placeholder="Enter your name">
+                    </div>
+                    <div class="conv__comment-container">
+                        <label class="conv__comment-label" for="comText">COMMENT</label>
+                        <textarea class="conv__comment-textarea" id="comText" name="comment" rows="4"
+                            placeholder="Add a new comment"></textarea>
+                    </div>
+                    <div class="conv__btn-container">
+                        <button class="conv__btn" type="submit">COMMENT</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Comment section -->
+        <section class="comment">
         </section>
     </main>
     <!-- Footer section -->
@@ -96,9 +141,12 @@
             <div class="footer__heading">
                 <h2 class="footer__title">Get in Touch</h2>
                 <div class="footer__social">
-                    <a class="footer__social-media" href="https://instagram.com"><img src="./assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
-                    <a class="footer__social-media" href="https://facebook.com"><img src="./assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
-                    <a class="footer__social-media" href="https://twitter.com"><img src="./assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
+                    <a class="footer__social-media" href="https://instagram.com"><img
+                            src="./assets/icons/Icon-instagram.svg" alt="instagram icon"></a>
+                    <a class="footer__social-media" href="https://facebook.com"><img
+                            src="./assets/icons/Icon-facebook.svg" alt="facebook icon"></a>
+                    <a class="footer__social-media" href="https://twitter.com"><img
+                            src="./assets/icons/Icon-twitter.svg" alt="twitter icon"></a>
                 </div>
             </div>
             <div class="footer__contact-container">
@@ -107,7 +155,7 @@
                     <p class="footer__contact-address">
                         503 Broadway Penthouse,<br>New York, NY 10012, USA
                     </p>
-                    <p class="footer__contact-link"> 
+                    <p class="footer__contact-link">
                         <a class="footer__contact-link" href="mailto:info@thebeesknees.com">info@thebeesknees</a>
                     </p>
                 </div>
@@ -115,19 +163,22 @@
                     <h3 class="footer__contact-title">Limitless Artist Group</h3>
                     <p class="footer__contact-address">Booking Agent for <br>US / South America / Japan</p>
                     <p class="footer__contact-link">
-                        <a class="footer__contact-link" href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
+                        <a class="footer__contact-link"
+                            href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
                     </p>
                 </div>
                 <div class="footer__contact">
                     <h3 class="footer__contact-title">ARCH Entertainment</h3>
                     <p class="footer__contact-address">"Booking Agent for UK / EU / AU"</p>
                     <p class="footer__contact-link">
-                        <a class="footer__contact-link" href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
+                        <a class="footer__contact-link"
+                            href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
                     </p>
                 </div>
             </div>
             <div class="footer__logo">
-                <a href="./index.html"><img class="footer__logo-image" src="./assets/logo/Logo-bandsite.svg" alt="bandsite logo"></a>
+                <a href="./index.html"><img class="footer__logo-image" src="./assets/logo/Logo-bandsite.svg"
+                        alt="bandsite logo"></a>
             </div>
         </section>
         <p class="footer__copyright">Copyright The Bees Knees © 2023 All Rights Reserved</p>
