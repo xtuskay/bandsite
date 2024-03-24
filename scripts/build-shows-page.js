@@ -1,4 +1,4 @@
-// Array containing information about the events
+
 const events = [
   {
     date: "Mon Sep 09 2024",
@@ -32,10 +32,10 @@ const events = [
   },
 ];
 
-// Function to create event cards and append them to the show container
+
 function createEventCards(eventsData) {
   console.log(eventsData);
-  // Get the show container element
+
   const showContainer = document.querySelector(".show__container");
   const showHeader = document.createElement("div");
   showHeader.classList.add("show__container-header");
@@ -61,10 +61,10 @@ function createEventCards(eventsData) {
   showHeader.appendChild(headerEmpty);
   showContainer.appendChild(showHeader);
 
-  //     // Loop through the events array and create HTML for each event
+
   eventsData.forEach((eventInfo) => {
     console.log(eventInfo);
-    //       // Create a div element for the event card
+
     const eventCard = document.createElement("div");
     eventCard.classList.add("show__new");
 
@@ -81,7 +81,7 @@ function createEventCards(eventsData) {
     showElement.classList.add("show__info");
     console.log(showElement);
 
-    // Create p elements for event information
+
     const dateElement = document.createElement("p");
     dateElement.classList.add("show__details");
     dateElement.textContent = eventInfo.date;
@@ -97,7 +97,7 @@ function createEventCards(eventsData) {
     const buttonElement = document.createElement("button");
     buttonElement.classList.add("show__button");
     buttonElement.textContent = "BUY TICKET";
-    //Create h3 elements for even infomation
+
 
     eventCard.appendChild(dateHeader);
     eventCard.appendChild(dateElement);
@@ -114,8 +114,7 @@ function createEventCards(eventsData) {
 
 createEventCards(events);
 
-// Create your function that adds a class using classList.add, this class should be defined in your scss
-// addSelectedState() {}
+
 function press() {
   const showNew = document.querySelector(".show__new");
 
