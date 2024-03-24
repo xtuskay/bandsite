@@ -38,7 +38,7 @@ function createEventCards(eventsData) {
   // Get the show container element
   const showContainer = document.querySelector(".show__container");
   const showHeader = document.createElement("div");
-  showHeader.classList.add("show_container__header");
+  showHeader.classList.add("show__container-header");
 
   const headerDate = document.createElement("h3");
   headerDate.textContent = "DATES";

@@ -14,7 +14,7 @@
     }
 
     &__container {
-        &__header {
+        &-header {
             display: none;
             font-size: 0.875rem;
             line-height: 1.3rem;
@@ -66,9 +66,6 @@
         padding-bottom: 1rem;
     }
 
-
-
-
         &__button {
             background-color: $color-black;
             color: white;
@@ -77,8 +74,99 @@
             align-self: center;
             width: 100%;
             border-radius: 4px;
+            &:hover{
+              background-color: $color-darkblack;
+            }
 
 
+    }
+}
+
+.hero {
+    height: 50vh;
+    width: 100%;
+    background-image: url(/assets/Images/hero-shows.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__captain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        padding: 0 2rem;
+        background-color: rgba($color: $color-black, $alpha: 0.5);
+        height: inherit;
+        width: inherit;
+
+    }
+
+    &__desc{
+        font-family: 'Avenir-Next';
+        color: $color-white;
+        font-size: 1.2rem;
+        width: 13rem;
+        line-height: 2rem;
+        font-weight: 400;
+        padding-bottom: 1rem;
+        
+        &-sub{
+            color: $color-white;
+            font-weight: 600;
+            font-family: 'Avenir-Next';
+            font-size: 1.5rem;
+        }
+        &-song-insert{
+            width:100%;
+        }
+    }
+
+    @include tablet{
+        height: 80vh;
+
+        &__desc{
+            font-size: 1.5rem;
+            line-height: 4.25rem;
+            width: 32rem;
+
+            &-sub{
+                font-size: 3.75rem;
+            }
+
+            &-song-insert{
+                width:60%;
+        }
+
+        }
+    }
+
+    @include desktop{
+        height: 100vh;
+
+        &__container{
+            width: 50%;
+        }
+        
+        &__captain{
+            padding: 0 8rem;
+            flex-direction: row;
+            align-items: center;
+            width: inherit;
+        }
+
+        &__desc{
+            font-family: 'Avenir Next';
+            color: $color-white;
+            font-size: 1.5rem;
+            width: 32rem;
+            line-height: 2rem;
+            font-weight: 600;
+            &-sub{
+                font-size: 3.7rem;
+
+            }
+        }
     }
 }
 
@@ -88,14 +176,14 @@
 
 
 
-@include tablet {
-    .show {
+@include tablet{
+    .show{
         &__title{
             margin-bottom:2rem;
         }
 
-        &__container {
-            &__header {
+        &__container{
+            &-header{
                 display: flex;
                 justify-content: space-between;
                 font-family: "Avenir-Next";
@@ -108,19 +196,19 @@
 
 
 
-        &__new {
+        &__new{
             flex-direction: row;
             justify-content: space-between;
         }
 
-        &__info {
+        &__info{
             display: none;
 
         }
 
 
 
-        &__button {
+        &__button{
             width: 10rem;
             height: 3rem;
             border-radius: 4px;
@@ -139,29 +227,37 @@
         &__title {
             flex: 0.5;
             margin-left: 8rem;
+            font-size: 2.25rem;
+            // line-height: 2.75;
+            font-weight: 600;
         }
 
         &__container {
             flex: 2;
             margin-right:7rem;
             
-            &__header {
+            &-header {
                 display: flex;
                 justify-content: space-between;
                 font-family: "Avenir-Next";
                 color: #AFAFAF;
-            
+                margin-top: 1rem;
             }
 
         }
         &__header-location{
             margin-right: 7rem;
         }
-        
+        &__header-date{
+          margin-left: 1rem;
+        }
         
         &__new {
             flex-direction: row;
             justify-content: space-between;
+            align-items: flex-end;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
         
         &__info {

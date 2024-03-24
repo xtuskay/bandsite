@@ -26,7 +26,7 @@
   font-size: 2.25rem;
   padding: 1rem 1.5rem 1rem 0;
 }
-.show__container__header {
+.show__container-header {
   display: none;
   font-size: 0.875rem;
   line-height: 1.3rem;
@@ -67,12 +67,93 @@
   width: 100%;
   border-radius: 4px;
 }
+.show__button:hover {
+  background-color: #000000;
+}
+
+.hero {
+  height: 50vh;
+  width: 100%;
+  background-image: url(/assets/Images/hero-shows.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero__captain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 2rem;
+  background-color: rgba(50, 50, 50, 0.5);
+  height: inherit;
+  width: inherit;
+}
+.hero__desc {
+  font-family: "Avenir-Next";
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  width: 13rem;
+  line-height: 2rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+.hero__desc-sub {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-family: "Avenir-Next";
+  font-size: 1.5rem;
+}
+.hero__desc-song-insert {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+  .hero__desc {
+    font-size: 1.5rem;
+    line-height: 4.25rem;
+    width: 32rem;
+  }
+  .hero__desc-sub {
+    font-size: 3.75rem;
+  }
+  .hero__desc-song-insert {
+    width: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 100vh;
+  }
+  .hero__container {
+    width: 50%;
+  }
+  .hero__captain {
+    padding: 0 8rem;
+    flex-direction: row;
+    align-items: center;
+    width: inherit;
+  }
+  .hero__desc {
+    font-family: "Avenir Next";
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    width: 32rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+  .hero__desc-sub {
+    font-size: 3.7rem;
+  }
+}
 
 @media (min-width: 768px) {
   .show__title {
     margin-bottom: 2rem;
   }
-  .show__container__header {
+  .show__container-header {
     display: flex;
     justify-content: space-between;
     font-family: "Avenir-Next";
@@ -99,23 +180,32 @@
   .show__title {
     flex: 0.5;
     margin-left: 8rem;
+    font-size: 2.25rem;
+    font-weight: 600;
   }
   .show__container {
     flex: 2;
     margin-right: 7rem;
   }
-  .show__container__header {
+  .show__container-header {
     display: flex;
     justify-content: space-between;
     font-family: "Avenir-Next";
     color: #AFAFAF;
+    margin-top: 1rem;
   }
   .show__header-location {
     margin-right: 7rem;
   }
+  .show__header-date {
+    margin-left: 1rem;
+  }
   .show__new {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .show__info {
     display: none;
