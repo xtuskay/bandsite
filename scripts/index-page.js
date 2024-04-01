@@ -1,3 +1,9 @@
+import { BandSiteApi } from "./band-site-api";
+
+const bandApiIndex = new BandSiteApi("27bd7db2-caf3-4c4d-aa61-02e8e7e17852");
+const comment = await bandApiIndex.getComments();
+
+
 const credits = [
   {
     name: "Victor Pinto",
