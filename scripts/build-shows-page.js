@@ -1,8 +1,7 @@
-import { BandSiteApi } from "./band-site-api";
+import { BandSiteApi } from "./band-site-api.js";
 
 const bandApiIndex = new BandSiteApi("27bd7db2-caf3-4c4d-aa61-02e8e7e17852");
 const events = await bandApiIndex.getShows();
-console.log(events);
 
 function formatTimestamp(timestamp){
   const date = new Date(timestamp);
@@ -12,41 +11,8 @@ function formatTimestamp(timestamp){
   return `${day}/${month}/${year}`;
 }
 
-// const events = [
-//   {
-//     date: "Mon Sep 09 2024",
-//     venue: "Ronald Lane",
-//     location: "San Francisco, CA",
-//   },
-//   {
-//     date: "Tue Sept 17 2024",
-//     venue: "Pier 3 East",
-//     location: "San Francisco, CA",
-//   },
-//   {
-//     date: "Sat Oct 12 2024",
-//     venue: "View Lounge",
-//     location: "San Francisco, CA",
-//   },
-//   {
-//     date: "Sat Nov 16 2024",
-//     venue: "Hyatt Agency",
-//     location: "San Francisco, CA",
-//   },
-//   {
-//     date: "Fri Nov 29 2024",
-//     venue: "Moscow Center",
-//     location: "San Francisco, CA",
-//   },
-//   {
-//     date: "Wed Dec 18 2024",
-//     venue: "Press Club",
-//     location: "San Francisco, CA",
-//   },
-// ];
 
 function createEventCards(eventsData) {
-  console.log(eventsData);
 
   const showContainer = document.querySelector(".show__container");
   const showHeader = document.createElement("div");
@@ -60,21 +26,20 @@ function createEventCards(eventsData) {
   headerVenue.textContent = "VENUE";
   headerVenue.classList.add("show__header-venue");
 
-  const headerLoction = document.createElement("h3");
-  headerLoction.textContent = "LOCATION";
-  headerLoction.classList.add("show__header-location");
+  const headerLocation = document.createElement("h3");
+  headerLocation.textContent = "LOCATION";
+  headerLocation.classList.add("show__header-location");
 
   const headerEmpty = document.createElement("h3");
   headerEmpty.classList.add("show__header-empty");
 
   showHeader.appendChild(headerDate);
   showHeader.appendChild(headerVenue);
-  showHeader.appendChild(headerLoction);
+  showHeader.appendChild(headerLocation);
   showHeader.appendChild(headerEmpty);
   showContainer.appendChild(showHeader);
 
   eventsData.forEach((eventInfo) => {
-    console.log(eventInfo);
 
     const eventCard = document.createElement("div");
     eventCard.classList.add("show__new");
@@ -90,7 +55,6 @@ function createEventCards(eventsData) {
     const showElement = document.createElement("h3");
     showElement.textContent = "LOCATION";
     showElement.classList.add("show__info");
-    console.log(showElement);
 
     const dateElement = document.createElement("p");
     dateElement.classList.add("show__details");
@@ -127,6 +91,11 @@ function press() {
   const showNew = document.querySelector(".show__new");
 
   showNew.classList.add("show__new-selected");
-
-  console.log("TEST:", showNew.classList);
 }
+
+
+
+
+
+
+
