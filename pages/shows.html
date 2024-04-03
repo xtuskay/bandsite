@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/bio.css">
     <link rel="stylesheet" href="/styles/shows.css">
-    <script src="/scripts/build-shows-page.js" defer></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="/scripts/build-shows-page.js" type="module" defer></script>
     <title>Bandsite shows</title>
 </head>
 <body>
     <header class="header">
         <nav class="header__nav">
             <a class="header__nav-container" href="../index.html">
-                <img class="header__nav-logo" src="../assets/Logo/Logo-bandsite.svg" alt="bandsite logo">
+                <img class="header__nav-logo" src="../assets/logos/Logo-bandsite.svg" alt="bandsite logo">
             </a>
             <ul class="header__nav-list">
                 <li class="header__nav-list-item">
                     <a class="header__nav-list-item-link" href="../index.html">Biography</a>
                 </li>
                 <li class="header__nav-list-item">
-                    <a class="header__nav-list-item-link" id="active" href="">Shows</a>
+                    <a class="header__nav-list-item-link" id="active" href="./shows.html">Shows</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Hero section -->
         <section class="hero">
             <div class="hero__captain">
                 <div class="hero__container">
@@ -38,14 +38,12 @@
                 </div>
             </div>
         </section>
-        <!-- Shows section -->
         <section class="show">
             <h1 class="show__title">Shows</h1>
             <div class="show__container">
                 
             </div>
         </section>
-        <!-- Footer section -->
         <footer class="footer">
             <section class="footer__section">
                 <div class="footer__heading">
@@ -87,7 +85,7 @@
                     </div>
                 </div>
                 <div class="footer__logo">
-                    <a href="./index.html"><img class="footer__logo-image" src="../assets/logo/Logo-bandsite.svg"
+                    <a href="/index.html"><img class="footer__logo-image" src="../assets/logos/Logo-bandsite.svg"
                             alt="bandsite logo"></a>
                 </div>
             </section>
