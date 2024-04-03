@@ -1,37 +1,49 @@
+import { BandSiteApi } from "./band-site-api";
 
-const events = [
-  {
-    date: "Mon Sep 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+const bandApiIndex = new BandSiteApi("27bd7db2-caf3-4c4d-aa61-02e8e7e17852");
+const events = await bandApiIndex.getShows();
+console.log(events);
 
+function formatTimestamp(timestamp){
+  const date = new Date(timestamp);
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
+
+// const events = [
+//   {
+//     date: "Mon Sep 09 2024",
+//     venue: "Ronald Lane",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Tue Sept 17 2024",
+//     venue: "Pier 3 East",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Sat Oct 12 2024",
+//     venue: "View Lounge",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Sat Nov 16 2024",
+//     venue: "Hyatt Agency",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Fri Nov 29 2024",
+//     venue: "Moscow Center",
+//     location: "San Francisco, CA",
+//   },
+//   {
+//     date: "Wed Dec 18 2024",
+//     venue: "Press Club",
+//     location: "San Francisco, CA",
+//   },
+// ];
 
 function createEventCards(eventsData) {
   console.log(eventsData);
@@ -61,7 +73,6 @@ function createEventCards(eventsData) {
   showHeader.appendChild(headerEmpty);
   showContainer.appendChild(showHeader);
 
-
   eventsData.forEach((eventInfo) => {
     console.log(eventInfo);
 
@@ -81,10 +92,9 @@ function createEventCards(eventsData) {
     showElement.classList.add("show__info");
     console.log(showElement);
 
-
     const dateElement = document.createElement("p");
     dateElement.classList.add("show__details");
-    dateElement.textContent = eventInfo.date;
+    dateElement.textContent = formatTimestamp(eventInfo.date);
 
     const venueElement = document.createElement("p");
     venueElement.classList.add("show__details");
@@ -97,7 +107,6 @@ function createEventCards(eventsData) {
     const buttonElement = document.createElement("button");
     buttonElement.classList.add("show__button");
     buttonElement.textContent = "BUY TICKET";
-
 
     eventCard.appendChild(dateHeader);
     eventCard.appendChild(dateElement);
@@ -113,7 +122,6 @@ function createEventCards(eventsData) {
 }
 
 createEventCards(events);
-
 
 function press() {
   const showNew = document.querySelector(".show__new");

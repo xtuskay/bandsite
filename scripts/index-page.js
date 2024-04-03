@@ -1,31 +1,40 @@
 import { BandSiteApi } from "./band-site-api";
 
 const bandApiIndex = new BandSiteApi("27bd7db2-caf3-4c4d-aa61-02e8e7e17852");
-const comment = await bandApiIndex.getComments();
+const credits = await bandApiIndex.getComments();
+console.log(credits)
+
+function formatTimestamp(timestamp) {
+  const date = new Date(timestamp);
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+}
 
 
-const credits = [
-  {
-    name: "Victor Pinto",
-    date: "11/02/2023",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
+// const credits = [
+//   {
+//     name: "Victor Pinto",
+//     date: "11/02/2023",
+//     comment:
+//       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+//   },
 
-  {
-    name: "Christina Cabrera",
-    date: "10/28/2023",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
+//   {
+//     name: "Christina Cabrera",
+//     date: "10/28/2023",
+//     comment:
+//       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+//   },
 
-  {
-    name: "Isaac Tadesse",
-    date: "10/20/2023",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+//   {
+//     name: "Isaac Tadesse",
+//     date: "10/20/2023",
+//     comment:
+//       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+//   },
+// ];
 
 function displayComment(commentArray) {
   console.log(commentArray);
@@ -59,7 +68,8 @@ function displayComment(commentArray) {
     commentTextContainer.append(commentText);
 
     name.innerText = comment.name;
-    dateContainer.innerText = comment.date;
+    dateContainer.innerText = formatTimestamp(comment.timestamp);
+    console.log(comment.timestamp)
     commentText.innerText = comment.comment;
 
     commentBlock.classList.add("comment__card");
@@ -83,17 +93,20 @@ displayComment(credits);
 
 const form = document.querySelector(".conv__form");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   let date = new Date().toLocaleDateString("en-us");
   console.log(e.target.name.value);
 
-  let newComment = {
-    name: e.target.name.value,
-    date: date,
-    comment: e.target.comText.value,
-  };
+  const newComment = await bandApiIndex.postComment(e.target.name.value, e.target.comText.value)
+  console.log(newComment)
+
+  // let newComment = {
+  //   name: e.target.name.value,
+  //   date: date,
+  //   comment: e.target.comText.value,
+  // };
   console.log(newComment);
   e.target.name.value = "";
   e.target.comText.value = "";
